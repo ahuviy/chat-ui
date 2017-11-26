@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="message row" *ngFor="let message of messages"
+        [class.own-message]="message.username === userService.user.username">
+        <div class="col-xs-1">
+            <img class="avatar" [src]="message.avatar">
+        </div>
+        <div class="col-xs-3">{{message.username}}</div>
+        <div class="col-xs-6">{{message.text}}</div>
+    </div>
+</div>

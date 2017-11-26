@@ -26,3 +26,9 @@ export class SocketService {
         this.socket.emit('spotim/chat', { avatar, username, text });
     }
 }
+
+export interface Message {
+    avatar: string;
+    username: string;
+    text: string;
+}
